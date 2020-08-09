@@ -24,7 +24,8 @@
       "semi-style": ["error", "first"],
       "no-extra-semi": "error",
       "no-unexpected-multiline": "error",
-      "no-unreachable": "error"
+      "no-unreachable": "error",
+      "@typescript-eslint/no-explicit-any": 0
     }
   }
   
