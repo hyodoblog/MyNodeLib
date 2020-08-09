@@ -1,5 +1,5 @@
 import { createObjectCsvWriter } from 'csv-writer'
-import * as csv from 'csv-parse'
+import * as csvSync from 'csv-parse/lib/sync'
 import * as fs from 'fs'
 
 export default class Csv {
@@ -33,9 +33,8 @@ export default class Csv {
     await csvWriter.writeRecords(rows)
   }
 
-  public static import(path: string): void {
+  public static import(path: string): Array<Array<any>> {
     const buffer = fs.readFileSync(path)
-    const res = csv(buffer)
-    console.log(res)
+    return csvSync(buffer)
   }
 }

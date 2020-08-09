@@ -7,7 +7,8 @@
     "lint": "eslint --ext .ts,.tsx ./src",
     "lintfix": "eslint --ext .ts,.tsx ./src --fix",
     "build": "./node_modules/.bin/tsc",
-    "dev": "yarn lint && yarn build && node dist/index.js"
+    "dev": "yarn lint && yarn build && node dist/index.js",
+    "test": "yarn lint && yarn build && node dist/test.js"
   },
   "dependencies": {
     "@google-cloud/automl": "^2.2.0",
